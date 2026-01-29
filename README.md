@@ -18,7 +18,7 @@ A desktop RAG (Retrieval-Augmented Generation) application for analyzing custome
 - Required Ollama models:
   ```bash
   ollama pull nomic-embed-text  # Required for embeddings
-  ollama pull llama3.2          # Or any other chat model
+  ollama pull inis/core:3b      # Or any other chat model
   ```
 
 ## Installation
@@ -42,7 +42,7 @@ sudo dpkg -i cy-bee_0.1.0_amd64.deb
 
 2. **Clone and build**:
    ```bash
-   git clone https://github.com/davey-mason/cy-bee.git
+   git clone https://github.com/daveymason/cy-bee.git
    cd cy-bee
    npm install
    npm run tauri build
@@ -99,4 +99,4 @@ MIT
 
 ## Acknowledgments
 
-Built for [Inis Informatics](https://inisinformatics.com) customer discovery research.
+Built for [Inis Informatics](https://inis-informatics.com) customer discovery research.
