@@ -25,7 +25,7 @@ A desktop RAG (Retrieval-Augmented Generation) application for analyzing custome
 
 ### From Release (Ubuntu/Debian)
 
-Download the `.deb` package from the [Releases](https://github.com/YOUR_USERNAME/cy-bee/releases) page and install:
+Download the `.deb` package from the [Releases](https://github.com/davey-mason/cy-bee/releases) page and install:
 
 ```bash
 sudo dpkg -i cy-bee_0.1.0_amd64.deb
@@ -42,7 +42,7 @@ sudo dpkg -i cy-bee_0.1.0_amd64.deb
 
 2. **Clone and build**:
    ```bash
-   git clone https://github.com/YOUR_USERNAME/cy-bee.git
+   git clone https://github.com/davey-mason/cy-bee.git
    cd cy-bee
    npm install
    npm run tauri build
