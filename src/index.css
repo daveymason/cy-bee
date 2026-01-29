@@ -1,0 +1,82 @@
+@import "tailwindcss";
+
+:root {
+  /* Light glassmorphic theme */
+  --bg-primary: #f8fafc;
+  --bg-secondary: rgba(255, 255, 255, 0.7);
+  --bg-tertiary: rgba(255, 255, 255, 0.5);
+  --bg-glass: rgba(255, 255, 255, 0.6);
+  --border-color: rgba(148, 163, 184, 0.3);
+  --border-glass: rgba(255, 255, 255, 0.5);
+  --text-primary: #1e293b;
+  --text-secondary: #64748b;
+  --text-muted: #94a3b8;
+  
+  /* Brand colors - from the logo */
+  --color-blue: #3b82f6;
+  --color-blue-light: #60a5fa;
+  --color-orange: #f59e0b;
+  --color-orange-light: #fbbf24;
+  --color-red: #ef4444;
+  --color-red-light: #f87171;
+  
+  /* Functional colors */
+  --success: #22c55e;
+  --warning: var(--color-orange);
+  --error: var(--color-red);
+  
+  /* Shadows */
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.07), 0 2px 4px -1px rgba(0, 0, 0, 0.04);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.08), 0 4px 6px -2px rgba(0, 0, 0, 0.04);
+  --shadow-glass: 0 8px 32px rgba(0, 0, 0, 0.08);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, #f0f9ff 0%, #fef3c7 50%, #fef2f2 100%);
+  background-attachment: fixed;
+  color: var(--text-primary);
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  min-height: 100vh;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+/* Glass effect utility */
+.glass {
+  background: var(--bg-glass);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--border-glass);
+  box-shadow: var(--shadow-glass);
+}
+
+/* Custom scrollbar - light theme */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(241, 245, 249, 0.5);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(148, 163, 184, 0.4);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(148, 163, 184, 0.6);
+}
+
+/* Selection styling with brand gradient */
+::selection {
+  background: linear-gradient(90deg, var(--color-blue), var(--color-orange));
+  color: white;
+}
