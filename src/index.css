@@ -80,3 +80,79 @@ body {
   background: linear-gradient(90deg, var(--color-blue), var(--color-orange));
   color: white;
 }
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.app-spinner {
+  width: 28px;
+  height: 28px;
+  border-radius: 999px;
+  border: 3px solid rgba(59, 130, 246, 0.2);
+  border-top-color: var(--color-blue);
+  border-right-color: var(--color-orange);
+  animation: spin 0.9s linear infinite;
+}
+
+@keyframes toastEnter {
+  from {
+    opacity: 0;
+    transform: translateY(8px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes toastExit {
+  from {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(8px) scale(0.98);
+  }
+}
+
+.toast-enter {
+  animation: toastEnter 180ms ease-out;
+}
+
+.toast-exit {
+  animation: toastExit 180ms ease-in forwards;
+}
+
+@keyframes dialogEnter {
+  from {
+    opacity: 0;
+    transform: translateY(10px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes dialogExit {
+  from {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(10px) scale(0.98);
+  }
+}
+
+.dialog-enter {
+  animation: dialogEnter 180ms ease-out;
+}
+
+.dialog-exit {
+  animation: dialogExit 180ms ease-in forwards;
+}

@@ -1,8 +1,8 @@
-# Cy Bee 🐝
+# Cy Dog 🐶
 
 A desktop RAG (Retrieval-Augmented Generation) application for analyzing customer discovery interview data. Built with Tauri v2, Rust, React, and Tailwind CSS.
 
-![Cy Bee Screenshot](public/logo.png)
+![Cy Dog Screenshot](public/CyberDogLogoLong.png)
 
 ## Features
 
@@ -18,17 +18,17 @@ A desktop RAG (Retrieval-Augmented Generation) application for analyzing custome
 - Required Ollama models:
   ```bash
   ollama pull nomic-embed-text  # Required for embeddings
-  ollama pull inis/core:3b      # Or any other chat model
+  ollama pull k9/doggo:3b      # Or any other chat model
   ```
 
 ## Installation
 
 ### From Release (Ubuntu/Debian)
 
-Download the `.deb` package from the [Releases](https://github.com/davey-mason/cy-bee/releases) page and install:
+Download the `.deb` package from the [Releases](https://github.com/davey-mason/cy-dog/releases) page and install:
 
 ```bash
-sudo dpkg -i cy-bee_0.1.0_amd64.deb
+sudo dpkg -i cy-dog_0.1.0_amd64.deb
 ```
 
 ### From Source
@@ -42,8 +42,8 @@ sudo dpkg -i cy-bee_0.1.0_amd64.deb
 
 2. **Clone and build**:
    ```bash
-   git clone https://github.com/daveymason/cy-bee.git
-   cd cy-bee
+   git clone https://github.com/daveymason/cy-dog.git
+   cd cy-dog
    npm install
    npm run tauri build
    ```
@@ -60,7 +60,7 @@ sudo dpkg -i cy-bee_0.1.0_amd64.deb
    ollama serve
    ```
 
-2. **Launch Cy Bee** from your application menu or run `cy-bee`
+2. **Launch Cy Dog** from your application menu or run `cy-dog`
 
 3. **Select a chat model** from the dropdown
 
@@ -78,7 +78,7 @@ sudo dpkg -i cy-bee_0.1.0_amd64.deb
 ## Project Structure
 
 ```
-cy-bee/
+cy-dog/
 ├── src/                    # React frontend
 │   ├── App.tsx            # Main UI component
 │   ├── api.ts             # Tauri command wrappers
@@ -99,4 +99,4 @@ MIT
 
 ## Acknowledgments
 
-Built for [Inis Informatics](https://inis-informatics.com) customer discovery research.
+Built for the [Cyber Innovate](https://cyberinnovate.ie) customer discovery research.

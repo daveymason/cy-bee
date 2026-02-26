@@ -2,5 +2,5 @@
 #![cfg_attr(not(debug_assertions), windows_subsystem = "windows")]
 
 fn main() {
-    cy_bee_lib::run()
+    cy_dog_lib::run()
 }
