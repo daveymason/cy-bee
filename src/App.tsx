@@ -357,6 +357,11 @@ function App() {
     }
   };
 
+  const showLoadingOverlay = showSplash || isIngesting;
+  const loadingOverlayMessage = showSplash
+    ? 'Loading your workspace...'
+    : 'Indexing your dataset...';
+
   return (
     <div className="h-screen overflow-hidden flex flex-col">
       {/* Header */}
@@ -579,13 +584,13 @@ function App() {
                     className={`max-w-[88%] rounded-2xl px-4 py-3 ${
                       message.role === 'user'
                         ? 'bg-gradient-to-r from-[var(--color-orange)] to-[var(--color-orange-light)] text-white shadow-md shadow-[var(--color-orange)]/20'
-                        : 'glass relative pr-16'
+                        : 'glass relative pr-16 group'
                     }`}
                   >
                     {message.role === 'assistant' && (
                       <button
                         onClick={() => handleCopyMessage(message.id, message.content)}
-                        className="absolute top-2 right-2 inline-flex items-center gap-1.5 text-xs px-2 py-1 rounded-lg bg-white/80 hover:bg-white text-[var(--text-secondary)] border border-[var(--border-color)] cursor-pointer transition-colors"
+                        className="absolute top-2 right-2 inline-flex items-center gap-1.5 text-xs px-2 py-1 rounded-lg bg-white/80 hover:bg-white text-[var(--text-secondary)] border border-[var(--border-color)] cursor-pointer transition-all opacity-0 pointer-events-none group-hover:opacity-100 group-hover:pointer-events-auto group-focus-within:opacity-100 group-focus-within:pointer-events-auto"
                         title="Copy response"
                       >
                         {copiedMessageId === message.id ? (
@@ -757,13 +762,13 @@ function App() {
 
       <div
         className={`fixed inset-0 z-50 flex items-center justify-center transition-opacity duration-300 ${
-          showSplash ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'
+          showLoadingOverlay ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'
         }`}
       >
         <div className="absolute inset-0 bg-[linear-gradient(135deg,#f0f9ff_0%,#fef3c7_50%,#fef2f2_100%)]" />
         <div className="relative flex flex-col items-center gap-3 px-6 py-5 rounded-2xl bg-white/70 backdrop-blur-md border border-white/60 shadow-lg">
           <div className="app-spinner" />
-          <p className="text-sm text-[var(--text-secondary)]">Loading your workspace...</p>
+          <p className="text-sm text-[var(--text-secondary)]">{loadingOverlayMessage}</p>
         </div>
       </div>
     </div>
